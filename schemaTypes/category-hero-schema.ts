@@ -13,8 +13,7 @@ export const categoryHeroSchema = defineType({
       options: {
         list: [
           { title: 'Kitchen',    value: 'kitchen'    },
-          { title: 'Bathroom — Full',  value: 'bathroom-full'  },
-          { title: 'Bathroom — Half',  value: 'bathroom-half'  },
+          { title: 'Bathroom',   value: 'bathroom'   },
           { title: 'Basement',   value: 'basement'   },
           { title: 'Addition',   value: 'addition'   },
           { title: 'Mudroom',    value: 'mudroom'    },

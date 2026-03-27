@@ -35,22 +35,21 @@ export default defineType({
     }),
  
     defineField({
-      name: 'displayMode',
-      title: 'Display Mode',
-      type: 'string',
-      description:
-        'Grouped = cinematic cover + gallery grid (kitchens, full bathrooms). Collection = single hero + all images below (basements, mudrooms, half bathrooms). Grid = flat image grid, no framing (additions). Commercial = case-study layout with space type label + horizontal strip.',
-      options: {
-        list: [
-          { title: 'Grouped     — cover + gallery per project',       value: 'grouped'     },
-          { title: 'Collection  — single hero + all images',          value: 'collection'  },
-          { title: 'Grid        — flat image grid, no framing',       value: 'grid'        },
-          { title: 'Commercial  — case study with horizontal strip',  value: 'commercial'  },
-        ],
-        layout: 'radio',
-      },
-      initialValue: 'grouped',
-    }),
+  name: 'displayMode',
+  title: 'Display Mode',
+  type: 'string',
+  description:
+    'Collection = single hero cover + all images below (kitchens, bathrooms, basements, mudrooms). Grid = flat image grid, no framing (additions). Commercial = case-study layout with space type label + horizontal strip.',
+  options: {
+    list: [
+      { title: 'Collection  — single hero + all images',          value: 'collection'  },
+      { title: 'Grid        — flat image grid, no framing',       value: 'grid'        },
+      { title: 'Commercial  — case study with horizontal strip',  value: 'commercial'  },
+    ],
+    layout: 'radio',
+  },
+  initialValue: 'collection',
+}),
  
     // ── NEW: commercial space type ─────────────────────────
     defineField({
@@ -62,6 +61,7 @@ export default defineType({
         list: [
           { title: 'Retail',       value: 'retail'       },
           { title: 'Office',       value: 'office'       },
+          { title: 'Studio',        value: 'studio'        },
           { title: 'Restaurant',   value: 'restaurant'   },
           { title: 'Hospitality',  value: 'hospitality'  },
           { title: 'Other',        value: 'other'        },
